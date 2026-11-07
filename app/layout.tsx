@@ -1,13 +1,13 @@
-import { createElement, type ReactNode } from "react"
+import type { ReactNode } from "react"
 
-export default function DashboardLayout({
+export default function RootLayout({
   children,
 }: {
   children: ReactNode
 }) {
-  return createElement(
-    "html",
-    { lang: "en" },
-    createElement("body", null, createElement("main", null, children)),
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   )
 }
